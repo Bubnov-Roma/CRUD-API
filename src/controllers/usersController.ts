@@ -2,7 +2,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import usersService from "../services/usersService";
 import { isUserUpdateData, isValidUserData, isValidUUID } from "../utils/validation";
 
-export class UserController {
+export class UsersController {
   async handleRequest(req: IncomingMessage, res: ServerResponse): Promise<void> {
     const {method, url} = req;
     const urlParts =url?.split('/').filter(part => part) || [];
